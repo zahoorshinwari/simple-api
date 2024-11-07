@@ -1,8 +1,10 @@
 // models/db.js
 const { MongoClient } = require('mongodb');
 
-const mongoUri = process.env.MONGODB_URI;
-const dbName = 'yourDatabaseName';
+const mongoUri = 'mongodb+srv://khanzshinwari5371:XK4nYA2ok8M1Imnz@authentication.jhj9h.mongodb.net/?retryWrites=true&w=majority&appName=authentication'
+
+
+const dbName = 'authentication';
 
 let db;
 
