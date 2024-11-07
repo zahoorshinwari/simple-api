@@ -9,10 +9,12 @@ const port = 3000;
 connectToDb().then(() => {
   app.use('/api', userRoutes);
 
-  // Default route
-  app.get('*', (req, res) => {
-    res.status(404).json({ error: 'Not Found' });
-  });
+    // Default route for /
+    app.get('/', (req, res) => {
+        res.json({ message: 'Welcome to the API!' });
+      });
+
+ 
 
   app.listen(port, () => {
     console.log(`API is running on http://localhost:${port}`);
